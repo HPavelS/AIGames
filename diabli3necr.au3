@@ -1,7 +1,7 @@
 #include <Array.au3>
 
 HotKeySet("{f5}", "by")
-HotKeySet("{f2}", "first")
+;~ HotKeySet("{f2}", "first")
 Global $x = False
 
 While 1

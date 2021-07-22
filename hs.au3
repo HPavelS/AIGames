@@ -3,8 +3,8 @@ HotKeySet("{space}", "freezing")
 HotKeySet("{tab}", "reeRoll")
 HotKeySet("{insert}", "terminate")
 HotKeySet("{z}", "close")
-HotKeySet("{p}", "open")
-HotKeySet("{f11}", "rename")
+HotKeySet("{f11}", "open")
+
 While 1
    Sleep(100)
 WEnd
@@ -31,25 +31,20 @@ func reeRoll()
    MouseMove($pos[0], $pos[1], 1)
 EndFunc
 
-func rename()
-   If WinExists("Hea", '') Then
-	  WinSetTitle("Hea", '', "Hea2")
-   EndIf
-EndFunc
 
 
 
 func close()
    Sleep(500)
-   if WinExists("Hea2",'') Then
-	  WinSetState("Hea2",'', @SW_HIDE)
+   if WinExists("Hearthstone",'') Then
+	  WinSetState("Hearthstone",'', @SW_HIDE)
    EndIf
    Sleep(500)
    WinActivate("Сети",'')
 EndFunc
 
 Func open()
-   WinSetState("Hea2",'', @SW_SHOW)
+   WinSetState("Hearthstone",'', @SW_SHOW)
 EndFunc
 
 Func Terminate()
